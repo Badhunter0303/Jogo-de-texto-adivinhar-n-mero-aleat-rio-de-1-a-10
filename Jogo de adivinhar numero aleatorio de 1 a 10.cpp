@@ -4,10 +4,6 @@
 #include <string>
 #include <random>
 
-// Está muito bom
-
-// Versão 2: mudar algumas coisas pequenas, medo de mexer no original e quebrar alguma coisa
-
 bool isPrime(int number)    // Eu peguei da internet || Para saber se o número é primo
 {
 
