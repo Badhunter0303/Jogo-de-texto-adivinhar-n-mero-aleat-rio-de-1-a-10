@@ -6,6 +6,8 @@
 
 // Está muito bom
 
+// Versão 2: mudar algumas coisas pequenas, medo de mexer no original e quebrar alguma coisa
+
 bool isPrime(int number)    // Eu peguei da internet || Para saber se o número é primo
 {
 
@@ -26,6 +28,8 @@ int main()
     int pontuacao_computador {0};
 
     std::string nome_do_jogador;
+
+    bool nao_perguntar_nome_de_novo = false; // Inicializada aqui para que o programa não pergunte o nome do jogador + de uma vez
 
     while (1)   // Se o jogador quiser jogar novamente
     {
@@ -57,12 +61,12 @@ int main()
 
         std::cout << "\n\n\n Jogo de Matemática/Lógica: o computador vai pensar em um número natural aleatório de 1 a 10, você terá \n" << " que adivinhar o número podendo fazer até 3 perguntas. \n";
 
-        std::cout << "\n Por favor, digite seu nome: ";
-
-        bool nao_perguntar_nome_de_novo = false;
-
         if (nao_perguntar_nome_de_novo == false)
         {
+            nao_perguntar_nome_de_novo = true;
+
+            std::cout << "\n Por favor, digite seu nome: ";
+
             while (1)
             {
                 std::cin >> nome_do_jogador;
@@ -100,9 +104,10 @@ int main()
                 if (confirmacao == "Não" || confirmacao == "Nao" || confirmacao == "não" || confirmacao == "nao" || confirmacao == "NAO" || confirmacao == "nAO")
                     std::cout << "\n Por favor, digite seu nome novamente: ";
             }
-        }
 
-        std::cout << "\n Olá " << nome_do_jogador << "!\n\n";
+            std::cout << "\n Olá " << nome_do_jogador << "!\n\n";
+
+        }
 
         std::random_device rd;
 
@@ -124,7 +129,7 @@ int main()
 
         bool numero_menor_que_6;
 
-        {   // Descobrindo propriedades sobre o número que o computador "pensou
+        {   // Descobrindo propriedades sobre o número que o computador "pensou"
 
             if (numero_computador % 2 == 0)
                 numero_par = true;
@@ -226,7 +231,6 @@ int main()
                         std::cin.ignore();
                     }
                 }
-
 
                 switch (pergunta_1_resposta)
                 {
@@ -384,7 +388,6 @@ int main()
                             break;
                 }
             }
-
         }
         // Fim da 2ª Pergunta
 
@@ -415,7 +418,6 @@ int main()
                     perguntas_disponibilidade[pergunta_aleatoria_3] = 0; // Já deixa a pergunta indisponível
                     break;
                 }
-
             }
 
             std::cout << perguntas_lista[pergunta_aleatoria_3];
@@ -559,13 +561,12 @@ int main()
     std::cout << "\n\n Fim do jogo. Obrigado por jogar " << nome_do_jogador << "! \n";
 
     std::cout << "\n Jogo criado por Vinicius (Badhunter)."
-              << "\n\n Versão 2; Fim: 27/08/2024"
+              << "\n\n Versão 2, 27/08/2024"
               << "\n\n Última atualização: 27/08/2024 \n";
-
-
 
     return 0;
 }
+
 
 
 
