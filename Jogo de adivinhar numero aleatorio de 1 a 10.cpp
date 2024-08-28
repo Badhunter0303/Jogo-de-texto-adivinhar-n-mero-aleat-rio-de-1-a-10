@@ -524,7 +524,7 @@ int main()
             }
         }
 
-        std::cout << "\n Pontuação do " << nome_do_jogador << ": " << pontuacao_jogador << "\n";
+        std::cout << "\n Pontuação de " << nome_do_jogador << ": " << pontuacao_jogador << "\n";
 
         std::cout << "\n Pontuação do Computador: " << pontuacao_computador << "\n";
 
