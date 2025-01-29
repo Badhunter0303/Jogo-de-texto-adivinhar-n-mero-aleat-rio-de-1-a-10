@@ -55,7 +55,7 @@ int main()
             perguntas_disponibilidade.push_back(1);
         }
 
-        std::cout << "\n\n\n Jogo de Matemática/Lógica: o computador vai pensar em um número natural aleatório de 1 a 10, você terá \n" << " que adivinhar o número podendo fazer até 3 perguntas. \n";
+        std::cout << "\n\n\n Jogo de Matemática/Lógica: o computador vai pensar em um número natural aleatório de 1 a 10, você terá que adivinhar o número podendo fazer até 3 perguntas. \n";
 
         if (nao_perguntar_nome_de_novo == false)
         {
@@ -164,7 +164,7 @@ int main()
             else numero_menor_que_6 = false;
         }
 
-        std::cout << "\n Computador: Eu já pensei em um número, agora é sua vez de adivinhá-lo! \n";
+        std::cout << "\n Computador: Eu já pensei em um número de 1 a 10, agora é sua vez de adivinhá-lo! \n";
 
         std::cout << "\n 1ª Pergunta: \n";
 
@@ -556,9 +556,9 @@ int main()
 
     std::cout << "\n\n Fim do jogo. Obrigado por jogar " << nome_do_jogador << "! \n";
 
-    std::cout << "\n Jogo criado por Vinicius (Badhunter)."
+    std::cout << "\n Jogo criado por Daniel Vinicius (Badhunter)."
               << "\n\n Versão 2, 27/08/2024"
-              << "\n\n Última atualização: 27/08/2024 \n";
+              << "\n\n Última atualização: 28/01/2025 \n";
 
     return 0;
 }
